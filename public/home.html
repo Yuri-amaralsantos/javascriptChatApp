@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+</head>
+
+<body>
+    <h2>Welcome to Home Page</h2>
+    <p id="welcomeMessage"></p>
+    <button onclick="logout()">Logout</button>
+
+    <h3>Chat</h3>
+    <div id="chatBox" class="chat-container"></div>
+    <input type="text" id="messageInput" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+
+    <script src="home.js"></script>
+</body>
+
+</html>
