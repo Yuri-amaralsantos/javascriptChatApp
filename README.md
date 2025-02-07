@@ -12,7 +12,8 @@ Um aplicativo de chat em tempo real com autenticação JWT, WebSockets (Socket.i
 
 🛠️ **Como Instalar**
 
-1️⃣ Clonar o Repositório
+1️⃣ **Clonar o Repositório**
+
 git clone https://github.com/seu-usuario/chat-app.git
 cd chat-app
 
