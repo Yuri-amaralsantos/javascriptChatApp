@@ -2,6 +2,8 @@
 
 Um aplicativo de chat em tempo real com autenticação JWT, WebSockets (Socket.io) e PostgreSQL para gerenciamento de usuários.  
 
+![Demonstração](Animação.gif)
+
 ---
 
 ### 🚀 **Funcionalidades**  
