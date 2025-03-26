@@ -20,14 +20,12 @@ Um aplicativo de chat em tempo real com autenticação JWT, WebSockets (Socket.i
 
 ### 1️⃣ **Clonar o Repositório**
 
-git clone https://github.com/seu-usuario/chat-app.git
-cd chat-app
+git clone https://github.com/Yuri-amaralsantos/javascriptChatApp.git
 
 ---
 
 ### 2️⃣ **Configurar o Backend**
 
-cd backend
 npm install
 
 #### **Criar um arquivo .env e adicionar as configurações:**
