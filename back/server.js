@@ -1,18 +1,21 @@
-const express = require("express");
-const { Pool } = require("pg");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-const cors = require("cors");
-const http = require("http");
-const { Server } = require("socket.io");
-require("dotenv").config();
+import express from "express";
+import pg from "pg";
+const { Pool } = pg;
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import cors from "cors";
+import http from "http";
+import { Server } from "socket.io";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
         origin: "*", // Allow frontend access
-    }
+    },
 });
 
 app.use(express.json());
@@ -70,7 +73,11 @@ app.post("/login", async (req, res) => {
             return res.status(401).json({ error: "Invalid credentials" });
         }
 
-        const token = jwt.sign({ userId: user.rows[0].id, username: user.rows[0].username }, process.env.JWT_SECRET, { expiresIn: "1h" });
+        const token = jwt.sign(
+            { userId: user.rows[0].id, username: user.rows[0].username },
+            process.env.JWT_SECRET,
+            { expiresIn: "1h" }
+        );
 
         res.json({ token });
     } catch (err) {
